@@ -1,0 +1,15 @@
+Solución
+En la terminal MSYS2, asegúrate de estar en la carpeta:
+
+
+pwd
+Debe mostrar /c/Users/algun/Downloads/files/files 2
+
+Compila con:
+
+
+gcc problema1.c -o problema1.exe
+Ejecuta con:
+
+
+./problema1.exe

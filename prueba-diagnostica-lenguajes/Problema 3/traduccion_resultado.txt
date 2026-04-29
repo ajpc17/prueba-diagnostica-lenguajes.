@@ -1,0 +1,107 @@
+PALABRAS RESERVADAS ENCONTRADAS
+========================================
+Linea    Palabra C       Traduccion
+-------- --------------- --------------------
+5        int             entero
+5        int             entero
+6        if              si
+7        return          retornar
+9        int             entero
+10       int             entero
+11       for             para
+14       return          retornar
+18       int             entero
+18       int             entero
+19       if              si
+20       return          retornar
+21       else            sino
+22       return          retornar
+26       int             entero
+27       int             entero
+28       int             entero
+31       for             para
+32       int             entero
+37       int             entero
+38       while           mientras
+39       if              si
+41       else            sino
+48       int             entero
+49       switch          segun
+50       case            caso
+52       break           romper
+53       case            caso
+55       break           romper
+56       case            caso
+58       break           romper
+59       default         defecto
+61       break           romper
+64       return          retornar
+
+
+CODIGO TRADUCIDO
+========================================
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Funcion que calcula el factorial de n */
+entero factorial(entero n) {
+    si (n <= 0) {
+        retornar 1;
+    }
+    entero resultado = 1;
+    entero i;
+    para (i = 1; i <= n; i++) {
+        resultado = resultado * i;
+    }
+    retornar resultado;
+}
+
+/* Funcion que verifica si un numero es par */
+entero es_par(entero numero) {
+    si (numero % 2 == 0) {
+        retornar 1;
+    } sino {
+        retornar 0;
+    }
+}
+
+entero main() {
+    entero n = 5;
+    entero i;
+
+    // Calcular factoriales del 1 al n
+    para (i = 1; i <= n; i++) {
+        entero f = factorial(i);
+        printf("factorial(%d) = %d\n", i, f);
+    }
+
+    // Verificar pares e impares
+    entero contador = 0;
+    mientras (contador < n) {
+        si (es_par(contador)) {
+            printf("%d es par\n", contador);
+        } sino {
+            printf("%d es impar\n", contador);
+        }
+        contador++;
+    }
+
+    // Uso de switch
+    entero dia = 3;
+    segun (dia) {
+        caso 1:
+            printf("Lunes\n");
+            romper;
+        caso 2:
+            printf("Martes\n");
+            romper;
+        caso 3:
+            printf("Miercoles\n");
+            romper;
+        defecto:
+            printf("Otro dia\n");
+            romper;
+    }
+
+    retornar 0;
+}

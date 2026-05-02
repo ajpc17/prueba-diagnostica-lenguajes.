@@ -309,5 +309,6 @@ int main() {
     medir_y_guardar_n100(tiempo_python);
 
     printf("\n¡Programa finalizado exitosamente!\n\n");
+    system("pause");
     return 0;
 }
